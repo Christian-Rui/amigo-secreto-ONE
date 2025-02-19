@@ -20,7 +20,17 @@ function adicionarAmigo() {
   if (input.value === "") {
     alert("Você não digitou nenhum nome, tente novamente!");
   } else {
-    nomesAmigosArray.push(input.value);
+    nomesAmigosArray.push(input.value);   
     input.value = "";
+    listarAmigos();
   }
 }
+
+function listarAmigos(){
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+    for(let i = 0; i < nomesAmigosArray.length; i++){
+        lista.innerHTML += `<li>${nomesAmigosArray[i]}</li>`;
+    }
+}
+
