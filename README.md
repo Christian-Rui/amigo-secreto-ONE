@@ -58,8 +58,8 @@ Acesse e teste o projeto [**clicando Aqui!**](#)
 **Clone o repositório**:
 
 ```bash
-git clone https://github.com/seu-usuario/amigo-secreto.git
-cd amigo-secreto
+git clone https://github.com/Christian-Rui/amigo-secreto-ONE.git
+cd amigo-secreto-ONE
 ```
 
 # Time
