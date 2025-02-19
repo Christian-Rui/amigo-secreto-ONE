@@ -74,12 +74,14 @@ function adicionarAmigo() {
  */
 function renderizarListaValores(id, valor, textoOpcional = "") {
   let lista = document.getElementById(id);
-  let max = Array.isArray(valor) ? valor.length : 1;
   lista.innerHTML = "";
-  for (let i = 0; i < max; i++) {
-    lista.innerHTML += `<li>${textoOpcional}${
-      Array.isArray(valor) ? valor[i] : valor
-    }</li>`;
+
+  if (Array.isArray(valor)) {
+    for (let i = 0; i < valor.length; i++) {
+      lista.innerHTML += `<li>${textoOpcional}${valor[i]}</li>`;
+    }
+  } else {
+    lista.innerHTML += `<li>${textoOpcional}${valor}</li>`;
   }
 }
 
