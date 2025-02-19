@@ -22,15 +22,37 @@ function adicionarAmigo() {
   } else {
     nomesAmigosArray.push(input.value);   
     input.value = "";
-    listarAmigos();
+    renderizarListaValores("listaAmigos", nomesAmigosArray);
+    focarNoInput();
   }
 }
 
-function listarAmigos(){
-    let lista = document.getElementById("listaAmigos");
+function renderizarListaValores(id, valor, textoOpcional = ""){
+    let lista = document.getElementById(id);
+    let max = Array.isArray(valor) ? valor.length : 1;
     lista.innerHTML = "";
-    for(let i = 0; i < nomesAmigosArray.length; i++){
-        lista.innerHTML += `<li>${nomesAmigosArray[i]}</li>`;
+    for(let i = 0; i < max; i++){
+        lista.innerHTML += `<li>${textoOpcional}${Array.isArray(valor) ? valor[i] : valor}</li>`;
     }
 }
 
+function sortearAmigo(){
+    let tamanhoMax = nomesAmigosArray.length;
+    let nomeSorteado = nomesAmigosArray[gerarRandomIndex(tamanhoMax)];
+    let nomeFormatado = iniciarComLetraMaiuscula(nomeSorteado);
+    if(nomesAmigosArray.length > 1){
+        renderizarListaValores("resultado", nomeFormatado, "O amigo sorteador foi: ");
+    } else {
+        alert("Por favor, adicione mais que 1 nome para o sorteio");
+    }
+}
+
+function iniciarComLetraMaiuscula(ValorString = ""){
+    return ValorString.charAt(0).toUpperCase() + ValorString.substring(1);
+}
+
+function gerarRandomIndex(max){
+    return Math.floor(Math.random() * max);
+}
+
+console.log(gerarRandomIndex(10));
