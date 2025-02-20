@@ -22,7 +22,7 @@ Este projeto é uma aplicação simples de "Amigo Secreto" que permite aos usuá
 
 ## Como usar
 
-Acesse e teste o projeto [**clicando Aqui!**](#)
+Acesse e teste o projeto [**clicando Aqui!**](https://christian-rui.github.io/amigo-secreto-ONE/)
 
 1. **Adicionar Amigos:**
    Digite o nome do amigo no campo de entrada e clique no botão para adicionar.
@@ -58,8 +58,8 @@ Acesse e teste o projeto [**clicando Aqui!**](#)
 **Clone o repositório**:
 
 ```bash
-git clone https://github.com/seu-usuario/amigo-secreto.git
-cd amigo-secreto
+git clone https://github.com/Christian-Rui/amigo-secreto-ONE.git
+cd amigo-secreto-ONE
 ```
 
 # Time
