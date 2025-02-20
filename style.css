@@ -1,5 +1,5 @@
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #1C7C54;
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
     --color-button: #fe652b;
@@ -36,7 +36,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     padding: 40px 0 0;
+}
+
+.light{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+    background-color: var(--color-white);
+    width: 40px;
+    height: 40px;
+    padding: 5px 7px;
+    color: black;
+}
+
+.light:hover{
+    background-color: var(--color-tertiary);
+}
+
+.light.dark{
+    background-color: black;
+    color: var(--color-white);
+     
+}
+
+.light.dark:hover{
+    background-color: var(--color-text);
 }
 
 /* Seção de entrada */
@@ -50,6 +77,14 @@ body {
     align-items: center;
     padding: 20px;
     width: 100%;
+}
+
+.input-section.dark {
+    background-color: var(--color-text);
+}
+
+.dark .section-title{
+    color: var(--color-white);
 }
 
 /* Títulos */
@@ -85,6 +120,12 @@ body {
     border: 2px solid #000;
     border-radius: 25px 0 0 25px;
     font-size: 16px;
+}
+
+.dark .input-name {
+    background-color: #000;
+    color: var(--color-white);
+    border: 2px solid var(--color-tertiary);
 }
 
 .button-container {
@@ -134,6 +175,14 @@ ul {
     margin: 20px 0;
 }
 
+.dark .name-list {
+    color: var(--color-white);
+}
+
+/* .dark .name-list {
+    color: var(--color-white);
+} */
+
 .result-list {
     margin-top: 15px;
     color: #05DF05;
@@ -147,18 +196,23 @@ ul {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 10px 40px;
+    padding: 5px 40px;
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
 }
 
 .button-draw img {
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+.patinha{
+    width: 68px;
+    height: 68px;
 }
 
 .alert{
@@ -177,4 +231,47 @@ ul {
     transition: opacity 0.5s ease;
 }
 
+@media (orientation: landscape) and (max-width: 1024px) and (max-height: 500px) {
+    .header-banner {
+        flex-wrap: nowrap;
+    }
 
+    .main-title{
+        font-size: 44px;
+        margin-left: 30px;
+    }
+
+    .header-banner img{
+        width: 300px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 679px){
+    .header-banner img{
+        width: 250px;
+        margin-left: 30px;
+        margin-bottom: 5px;
+    }
+
+    .main-title{
+        font-size: 40px;
+    }
+
+    .section-title{
+        font-size: 30px;
+        margin-block: 5px;
+    }
+
+    .button-add{
+        padding: 15px 10px;
+    }
+
+    .button-draw img {
+        margin-right: 40px;
+    }
+
+    .patinha{
+        width: 50px;
+        height: 50px;
+    }
+}

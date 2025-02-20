@@ -3,6 +3,28 @@
 let nomesAmigosArray = [];
 
 let input = document.getElementById("amigo");
+let light = document.getElementById("light");
+let section = document.querySelector(".input-section");
+
+light.addEventListener("click", function () {
+  if(light.classList.contains("dark")){
+    light.classList.remove("fa-sun");
+    light.classList.add("fa-moon");   
+    light.classList.remove("dark");
+    section.classList.remove("dark");
+  } else {
+    light.classList.remove("fa-moon");
+    light.classList.add("fa-sun");
+    light.classList.add("dark");  
+    section.classList.add("dark"); 
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter" && input.value !== "") {
+    adicionarAmigo()
+  }
+});
 
 let podeAlertar = {
   adicionar: true,
@@ -46,7 +68,7 @@ function adicionarAmigo() {
     alertarAusenciaDeValor(
       idAlerta,
       chave,
-      "Você não digitou nenhum nome, tente novamente!"
+      "Você não digitou algum nome. Por favor, tente novamente!"
     );
   } else if (nomesAmigosArray.includes(input.value)) {
     alertarAusenciaDeValor(
