@@ -10,6 +10,8 @@ Este projeto é uma aplicação simples de "Amigo Secreto" que permite aos usuá
 - Verificar se o nome já foi adicionado.
 - Sortear um amigo aleatoriamente da lista.
 - Exibir mensagens de alerta para feedback ao usuário.
+- Botão para modo escuro na parte superior esquerda da página.
+- Página responsiva para celular.
 
 ## Tecnologias Utilizadas
 
@@ -17,6 +19,7 @@ Este projeto é uma aplicação simples de "Amigo Secreto" que permite aos usuá
   <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Font%20Awesome-00599C?style=for-the-badge&logo=fontawesome&logoColor=white">
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
 </div>
 
@@ -35,6 +38,7 @@ Acesse e teste o projeto [**clicando Aqui!**](https://christian-rui.github.io/am
 ## Principais Técnicas Utilizadas
 
 - **Manipulação do DOM**: Utilização de métodos como `document.getElementById()` e `innerHTML` para interagir com os elementos da página e atualizar a interface do usuário dinamicamente.
+  
 - **Validação de Entrada**: Implementação de verificações para garantir que os nomes adicionados não sejam vazios ou duplicados, melhorando a experiência do usuário.
 
 - **Funções de Callback**: Uso de funções como `setTimeout` para controlar a exibição de mensagens de alerta, permitindo que o usuário receba feedback visual temporário.
@@ -45,6 +49,8 @@ Acesse e teste o projeto [**clicando Aqui!**](https://christian-rui.github.io/am
 
 - **Controle de Estado**: Implementação de um objeto para gerenciar o estado das mensagens de alerta, evitando que múltiplos alertas sejam exibidos simultaneamente.
 
+- **Adição dinamica de classes**: Implementação de um `document.addEventListener("click")` para verificar se o botão do modo dark foi clicado e, em caso positivo, será adicionado ou removido a classe "dark" em tags específicas do projeto.
+  
 ## Estrutura do Projeto
 
 `index.html`: O arquivo HTML principal que contém a estrutura da página.
