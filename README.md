@@ -62,6 +62,10 @@ git clone https://github.com/Christian-Rui/amigo-secreto-ONE.git
 cd amigo-secreto-ONE
 ```
 
+## Badges do Projeto
+
+<img width="15%" src="./assets/badge.png">
+
 # Time
 
 | [<img loading="lazy" style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/113655013?v=4" width=115><br><sub>Bearly</sub>](https://github.com/Christian-Rui)
